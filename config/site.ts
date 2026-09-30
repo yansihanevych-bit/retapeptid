@@ -4,8 +4,8 @@
  */
 
 // TODO: подставить реальные URL
-export const CONSULTATION_URL = 'https://example.com/consultation';
-export const CATALOG_URL = 'https://example.com/catalog';
+export const CONSULTATION_URL = 'https://sl1mex.shop/';
+export const CATALOG_URL = 'https://slimex.to/';
 
 /**
  * Языки. Каждый открывается по своему адресу: /pl, /cs, /sk, /en.
