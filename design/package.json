@@ -1,0 +1,7 @@
+{
+  "name": "slimax-landing-design",
+  "private": true,
+  "type": "module",
+  "scripts": { "render": "node render.mjs" },
+  "devDependencies": { "@fontsource/manrope": "^5.2.8", "playwright": "^1.56.0", "sharp": "^0.34.4" }
+}

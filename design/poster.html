@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@import url(node_modules/@fontsource/manrope/500.css);
+@import url(node_modules/@fontsource/manrope/600.css);
+@import url(node_modules/@fontsource/manrope/700.css);
+@import url(node_modules/@fontsource/manrope/800.css);
+
+:root{
+  --bg:#0E211B; --bg2:#173026; --card:#12271F;
+  --ink:#F1F5EF; --ink-soft:#C3D1C7; --ink-faint:#8FA093;
+  --line:rgba(241,245,239,.14); --line-strong:rgba(241,245,239,.26);
+  --accent:#4E9C82; --accent-ink:#0B1A11; --pop:#B7D66A; --pop-soft:rgba(183,214,106,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:960px;background:var(--bg)}
+body{font-family:Manrope,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+#poster{position:relative;width:960px;padding:52px 56px 64px;overflow:hidden;
+  background:var(--bg);}
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(520px 420px at 82% 18%, rgba(78,156,130,.24), transparent 70%),
+             radial-gradient(520px 420px at 0% 100%, rgba(183,214,106,.06), transparent 70%)}
+.card>*{position:relative}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:16px}
+.logo .mark{width:60px;height:60px;border-radius:16px;background:var(--ink);color:var(--bg);
+  display:grid;place-items:center;font-weight:800;font-size:32px}
+.logo .word{font-weight:800;font-size:32px;letter-spacing:.04em}
+.lang{display:flex;align-items:center;border:2px solid var(--line-strong);border-radius:999px;padding:6px;gap:0}
+.lang span{display:grid;place-items:center;width:78px;height:60px;font-weight:700;font-size:22px;color:var(--ink-soft);letter-spacing:.04em}
+.lang span.on{background:var(--ink);color:var(--bg);border-radius:999px}
+.lang i{width:2px;height:26px;background:var(--line-strong)}
+
+/* card */
+.card{margin-top:40px;border:2px solid var(--line);border-radius:36px;padding:56px 52px 52px;
+  background:linear-gradient(180deg, rgba(23,48,38,.85), rgba(18,39,31,.92));position:relative;overflow:hidden}
+.hero{display:flex;gap:24px;align-items:flex-start}
+.hero .txt{flex:1}
+.badge{display:inline-flex;align-items:center;gap:12px;background:var(--pop-soft);color:var(--pop);
+  border-radius:999px;padding:12px 22px;font-weight:700;font-size:18px;letter-spacing:.12em;text-transform:uppercase}
+.badge b{width:10px;height:10px;border-radius:50%;background:var(--pop)}
+h1{margin-top:30px;font-weight:800;font-size:64px;line-height:1.08;letter-spacing:-.02em}
+h1 em{display:block;font-style:normal;color:var(--accent);margin-top:8px;font-size:48px;line-height:1.15}
+.lead{margin-top:34px;font-size:30px;line-height:1.45;font-weight:500;color:var(--ink-soft)}
+.lead strong{color:var(--ink);font-weight:700}
+
+.btns{margin-top:44px;display:flex;flex-direction:column;gap:22px}
+.btn{height:128px;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:22px;
+  font-weight:800;font-size:34px;letter-spacing:.08em;text-transform:uppercase}
+.btn svg{width:40px;height:40px}
+.btn.primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 18px 40px rgba(78,156,130,.28)}
+.btn.ghost{border:3px solid var(--accent);color:var(--ink);background:rgba(78,156,130,.06)}
+
+.promo{margin-top:48px;border:3px dashed rgba(183,214,106,.55);border-radius:26px;padding:34px 30px 38px;text-align:center;
+  background:rgba(183,214,106,.06)}
+.promo .label{font-weight:700;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.promo .code{margin-top:14px;font-weight:800;font-size:84px;letter-spacing:.1em;color:var(--pop);line-height:1}
+
+.trust{margin-top:44px;display:flex;justify-content:space-between;align-items:center;height:104px;box-sizing:content-box;padding-top:34px;border-top:2px solid var(--line)}
+.trust div{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:600;color:var(--ink-soft)}
+.trust svg{width:30px;height:30px;flex:none;color:var(--accent)}
+</style>
+</head>
+<body>
+<div id="poster">
+  <div class="top">
+    <div class="logo"><div class="mark">S</div><div class="word">SLIMAX</div></div>
+    <div class="lang" id="lang">
+      <span data-l="pl">PL</span><i></i><span data-l="cs">CS</span><i></i><span data-l="sk">SK</span><i></i><span data-l="en">EN</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hero">
+      <div class="txt">
+        <div class="badge"><b></b>Slimax Peptides</div>
+        <h1><span data-t="hello"></span><em data-t="thanks"></em></h1>
+      </div>
+    </div>
+
+    <p class="lead"><span data-t="robot"></span> <strong data-t="choose"></strong></p>
+
+    <div class="btns">
+      <div class="btn primary" id="btn-consult">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+        <span data-t="consultation"></span>
+      </div>
+      <div class="btn ghost" id="btn-catalog">
+        <span data-t="catalog"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </div>
+    </div>
+
+    <div class="promo">
+      <div class="label" data-t="promoLabel"></div>
+      <div class="code">SLIMAX10</div>
+    </div>
+
+    <div class="trust">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-t="trust1"></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span data-t="trust2"></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-t="trust3"></span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

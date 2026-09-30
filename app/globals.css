@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0e211b; /* совпадает с фоном картинки — по бокам нет швов */
+  overflow-x: hidden;
+}
+
+.landing {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Картинка и зоны живут в одном контейнере — зоны масштабируются вместе с ней */
+.landing__frame {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+}
+
+.landing__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.landing__zone {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Скругление как у нарисованных кнопок (22px при кнопке 740×128) */
+.landing__zone--btn {
+  border-radius: 2.97% / 17.2%;
+}
+
+/* Пульсация «Перейти в каталог»: кольцо расходится от кнопки + мягкая подсветка */
+.landing__zone--pulse {
+  animation: catalog-pulse 1.8s ease-out infinite;
+}
+
+@keyframes catalog-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(78, 156, 130, 0.75);
+    background: rgba(78, 156, 130, 0.14);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(78, 156, 130, 0);
+    background: rgba(78, 156, 130, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(78, 156, 130, 0);
+    background: rgba(78, 156, 130, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing__zone--pulse {
+    animation: none;
+  }
+}
+
+/* Невидима, но видна при навигации с клавиатуры */
+.landing__zone:focus-visible {
+  outline: 3px solid #b7d66a;
+  outline-offset: 2px;
+}
+
+/* На широких экранах постер целиком помещается в окно по высоте */
+@media (min-width: 768px) {
+  .landing__frame {
+    width: min(100%, 960px, max(560px, calc(100svh * var(--ratio, 0.64))));
+  }
+}

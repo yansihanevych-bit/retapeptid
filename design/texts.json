@@ -1,0 +1,50 @@
+{
+  "pl": {
+    "hello": "Dzień dobry!",
+    "thanks": "Dziękujemy za zainteresowanie naszym produktem!",
+    "robot": "Sprawdzamy, czy nie jesteś robotem.",
+    "choose": "Wybierz sposób otrzymania:",
+    "consultation": "Konsultacja",
+    "catalog": "Przejdź do katalogu",
+    "promoLabel": "Twój kod rabatowy na 10% zniżki:",
+    "trust1": "Bezpłatna konsultacja",
+    "trust2": "Sprawdzona jakość",
+    "trust3": "Pełna poufność"
+  },
+  "cs": {
+    "hello": "Dobrý den!",
+    "thanks": "Děkujeme za váš zájem o náš produkt!",
+    "robot": "Ověřujeme, že nejste robot.",
+    "choose": "Vyberte si způsob získání:",
+    "consultation": "Konzultace",
+    "catalog": "Přejít do katalogu",
+    "promoLabel": "Váš slevový kód na 10 %:",
+    "trust1": "Bezplatná konzultace",
+    "trust2": "Ověřená kvalita",
+    "trust3": "Diskrétnost"
+  },
+  "sk": {
+    "hello": "Dobrý deň!",
+    "thanks": "Ďakujeme za váš záujem o náš produkt!",
+    "robot": "Overujeme, že nie ste robot.",
+    "choose": "Vyberte si spôsob získania:",
+    "consultation": "Konzultácia",
+    "catalog": "Prejsť do katalógu",
+    "promoLabel": "Váš zľavový kód na 10 %:",
+    "trust1": "Bezplatná konzultácia",
+    "trust2": "Overená kvalita",
+    "trust3": "Diskrétnosť"
+  },
+  "en": {
+    "hello": "Hello!",
+    "thanks": "Thank you for your interest in our product!",
+    "robot": "We are checking that you are not a robot.",
+    "choose": "Please choose how you would like to proceed:",
+    "consultation": "Consultation",
+    "catalog": "Go to catalog",
+    "promoLabel": "Your 10% discount promo code:",
+    "trust1": "Free consultation",
+    "trust2": "Verified quality",
+    "trust3": "Confidential"
+  }
+}
